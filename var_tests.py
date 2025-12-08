@@ -96,6 +96,8 @@ def run_backtest(ticker, start_date, window_size, windows, VaR_quantile):
 
     # --- Independence test --- #
     p01 = n01/(n00 +n01) # P(faliure at time t | no failure at time t-1)
+    LRind = None
+
     if n10 + n11 != 0: # The independce test cant occur if p11 is zero, so exclude that test if p11 = zero
         p11 = n11 / (n10 + n11) # P(failure at time t | failure at time t-1)
         pUC = (n01 + n11) / (n00 + n01+ n10 + n11) # P(failure at time t)
@@ -245,6 +247,8 @@ def run_backtest(ticker, start_date, window_size, windows, VaR_quantile):
 
     # --- Independence test --- #
     p01 = n01/(n00 +n01) # P(faliure at time t | no failure at time t-1)
+    LRind = None
+
     if n10 + n11 != 0: # The independce test cant occur if p11 is zero, so exclude that test if p11 = zero
         p11 = n11 / (n10 + n11) # P(failure at time t | failure at time t-1)
         pUC = (n01 + n11) / (n00 + n01+ n10 + n11) # P(failure at time t)
@@ -391,6 +395,7 @@ def run_backtest(ticker, start_date, window_size, windows, VaR_quantile):
 
     # --- Independence test --- #
     p01 = n01/(n00 +n01) # P(faliure at time t | no failure at time t-1)
+    LRind = None
     if n10 + n11 != 0: # The independce test cant occur if p11 is zero, so exclude that test if p11 = zero
         p11 = n11 / (n10 + n11) # P(failure at time t | failure at time t-1)
         pUC = (n01 + n11) / (n00 + n01+ n10 + n11) # P(failure at time t)
@@ -485,4 +490,5 @@ def run_backtest(ticker, start_date, window_size, windows, VaR_quantile):
 
 
     return result_NTS, result_t, result_Normal
+
 
