@@ -1,0 +1,10 @@
+pandas
+numpy
+arch
+yfinance
+statsmodels
+matplotlib
+temStaPy
+scipy
+streamlit
+
