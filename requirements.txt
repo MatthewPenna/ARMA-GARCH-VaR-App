@@ -6,5 +6,6 @@ statsmodels
 matplotlib
 scipy
 streamlit
+warnings
 
 
