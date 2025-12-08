@@ -8,7 +8,8 @@ from temStaPy.distNTS import *
 from scipy.stats import chi2, norm
 import scipy.integrate as spi
 from scipy.stats import t
-
+import warnings
+warnings.filterwarnings("ignore")
 
 def run_backtest(ticker, start_date, window_size, windows, VaR_quantile):
     """
@@ -484,3 +485,4 @@ def run_backtest(ticker, start_date, window_size, windows, VaR_quantile):
 
 
     return result_NTS, result_t, result_Normal
+
