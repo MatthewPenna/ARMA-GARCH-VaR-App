@@ -7,7 +7,7 @@ from var_tests import run_backtest
 
 st.title("ARMA–GARCH Value at Risk Forecaster App")
 
-st.write("Choose inputs, then compare ARMA-GARCH Models  with assumed Normal, t, and NTS Distribution Innovations.")
+st.write("Choose inputs, then compare ARMA-GARCH Models  with assumed Normal, t, and Normal Tempered Stable Distribution Innovations.")
 
 # ---------- Sidebar inputs ----------
 st.sidebar.header("Inputs")
@@ -213,3 +213,4 @@ if run_clicked:
 
         st.markdown("---")
         show_model_results("Normal", normal_result)
+
