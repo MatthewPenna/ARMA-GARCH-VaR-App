@@ -5,7 +5,8 @@ yfinance
 statsmodels
 matplotlib
 scipy
-streamlit
+streamlit==1.36.0
+altair==4.2.2
 
 
 
